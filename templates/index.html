@@ -4,8 +4,20 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>WEAR</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
 </head>
 <body>
+
+    <header class="navbar">
+        <div class="logo-container">
+            <img src="{{ url_for('static', filename='logo.png') }}" alt="WEAR Logo" class="logo" draggable="false" loading="lazy">
+        </div>
+
+        <nav class="nav-links">
+            <a href="/" class="nav-item active">Home</a>
+            <a href="/settings" class="nav-item">Settings</a>
+        </nav>
+    </header>
 
     <main class="hero-section">
         <h1 class="title">The Fitting Room,<br>Reimagined.</h1>
