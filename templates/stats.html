@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Statistics - WEAR</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+
+    <header class="navbar">
+        <div class="logo-container">
+            <img src="{{ url_for('static', filename='logo.png') }}" alt="WEAR Logo" class="logo">
+        </div>
+
+        <nav class="nav-links">
+            <a href="/" class="nav-item">Home</a>
+            <a href="/settings" class="nav-item">Settings</a>
+            <a href="/stats" class="nav-item active">Stats</a>
+        </nav>
+    </header>
+
+    <main class="hero-section">
+        <h1>Your History</h1>
+        
+        <div class="stats-container">
+            {% if history %}
+                <table class="styled-table">
+                    <thead>
+                        <tr>
+                            <th>Entry #</th>
+                            <th>Weight (kg)</th>
+                            <th>Height (cm)</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        {% for row in history %}
+                        <tr>
+                            <td>{{ row.id }}</td>
+                            <td>{{ row.weight }}</td>
+                            <td>{{ row.height }}</td>
+                        </tr>
+                        {% endfor %}
+                    </tbody>
+                </table>
+            {% else %}
+                <p>No data recorded yet.</p>
+            {% endif %}
+        </div>
+    </main>
+
+</body>
+</html>
