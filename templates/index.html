@@ -10,13 +10,15 @@
 
     <header class="navbar">
         <div class="logo-container">
-            <img src="{{ url_for('static', filename='logo.png') }}" alt="WEAR Logo" class="logo" draggable="false" loading="lazy">
+            <a href="{{ url_for('home') }}">
+                <img src="{{ url_for('static', filename='logo.png') }}" alt="WEAR Logo" class="logo" draggable="false" loading="lazy">
+            </a>
         </div>
 
         <nav class="nav-links">
-            <a href="/" class="nav-item active">Home</a>
-            <a href="/settings" class="nav-item">Settings</a>
-            <a href="/stats" class="nav-item">Stats</a>
+            <a href="{{ url_for('home') }}" class="nav-item active">Home</a>
+            <a href="{{ url_for('settings') }}" class="nav-item">Settings</a>
+            <a href="{{ url_for('stats') }}" class="nav-item">Stats</a>
         </nav>
     </header>
 
@@ -27,8 +29,10 @@
         <p class="description">Upload your photo and see exactly how the latest styles fit your unique look instantly. No styling guessing games.</p>
         
         <div class="button-group">
-            <a href="#" class="btn-primary">Try On Now</a>
-            <a href="/settings" class="btn-secondary">Settings</a>
+            <a href="{{ url_for('try_on') }}" class="btn-primary">Try On Now</a>
+            
+            <a href="{{ url_for('settings') }}" class="btn-secondary">Settings</a>
+
         </div>
     </main>
 

@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WEAR - Work in Progress</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+
+    <header class="navbar">
+        <div class="logo-container">
+            <a href="/">
+                <img src="{{ url_for('static', filename='logo.png') }}" alt="WEAR Logo" class="logo" draggable="false" loading="lazy">
+            </a>
+        </div>
+
+        <nav class="nav-links">
+            <a href="/" class="nav-item">Home</a>
+            <a href="/settings" class="nav-item">Settings</a>
+            <a href="/stats" class="nav-item">Stats</a>
+        </nav>
+    </header>
+
+    <main class="hero-section">
+        <div style="font-size: 60px; margin-bottom: 20px;">🚧</div>
+
+        <h1 class="title">Work in Progress</h1>
+        
+        <p class="subtitle">We are currently crafting this feature.</p>
+        
+        <p class="description">
+            This part of the WEAR experience is under construction. 
+            Our team is working hard to bring this to you soon.
+        </p>
+        
+        <div class="button-group">
+            <a href="/" class="btn-primary">Back to Home</a>
+        </div>
+    </main>
+
+</body>
+</html>
